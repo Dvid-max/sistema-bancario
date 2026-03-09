@@ -25,12 +25,15 @@ public class ClienteModel {
     private String nome;
 
     @Column
+    private Long saldo;
+
+    @Column(unique = true)
     private String cpf;
 
-    @Column
+    @Column(unique = true)
     private String email;
 
-    @Column
+    @Column(unique = true)
     private String telefone;
 
     @OneToMany(mappedBy = "cliente")
